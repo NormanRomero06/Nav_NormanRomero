@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/menu"
+        android:name="ni.edu.uca.navnormanromero.menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_numerosPares"
+            app:destination="@id/numerosPares" />
+        <action
+            android:id="@+id/action_menu_to_numeroMultiplo"
+            app:destination="@id/numeroMultiplo" />
+        <action
+            android:id="@+id/action_menu_to_cantidadEdades"
+            app:destination="@id/cantidadEdades" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="ni.edu.uca.navnormanromero.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/cantidadEdades"
+        android:name="ni.edu.uca.navnormanromero.cantidadEdades"
+        android:label="fragment_cantidad_edades"
+        tools:layout="@layout/fragment_cantidad_edades" />
+    <fragment
+        android:id="@+id/numeroMultiplo"
+        android:name="ni.edu.uca.navnormanromero.numeroMultiplo"
+        android:label="fragment_numero_multiplo"
+        tools:layout="@layout/fragment_numero_multiplo" />
+    <fragment
+        android:id="@+id/numerosPares"
+        android:name="ni.edu.uca.navnormanromero.numerosPares"
+        android:label="fragment_numeros_pares"
+        tools:layout="@layout/fragment_numeros_pares" />
+</navigation>
